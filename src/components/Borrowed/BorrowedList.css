@@ -20,14 +20,17 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-tr {
+thead {
+    background-color: #f9f9f9;
+}
+tr{
     cursor: pointer;
     border-bottom: 1px solid #dfdddd;
 }
-tr:first-child {
+tbody:first-child {
     background-color: #f9f9f9;
 }
-tr:last-child {
+tbody:last-child {
     border-bottom: none;
 }
 tr, th {

@@ -10,14 +10,16 @@ const BorrowedList = (props) => {
             </div>
             <div className="table-data">
                 <table>
-                    <tr>
-                        <th>Creditor</th>
-                        <th>Amount</th>
-                        <th>Interest</th>
-                        <th>Date of Issued</th>
-                        <th>Description</th>
-                        <th>Due Date</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Creditor</th>
+                            <th>Amount</th>
+                            <th>Interest</th>
+                            <th>Date of Issued</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
                     {props.passBorrowData.map(listitem => {
                         return (
                             <BorrowedListItem 
