@@ -59,7 +59,10 @@ const myBorrowList = [
     }
 ];
 
-const Borrowed = () => {
+const Borrowed = ({getBorrowData}) => {
+
+    getBorrowData(myBorrowList);
+
     return (
         <div>
             <BorrowedList passBorrowData = {myBorrowList} />

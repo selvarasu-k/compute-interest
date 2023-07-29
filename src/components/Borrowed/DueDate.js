@@ -7,7 +7,7 @@ const DueDate = (props) => {
     "Jul","Aug", "Sep", "Oct", "Nov","Dec"];
 
     const date = props.duedate.getDate();
-    const month = months[props.duedate.getMonth() + 1];
+    const month = months[props.duedate.getMonth()];
     const year = props.duedate.getFullYear();
         
     return (

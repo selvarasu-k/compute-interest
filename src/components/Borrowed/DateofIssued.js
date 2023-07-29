@@ -7,7 +7,7 @@ const DateofIssued = (props) => {
     "Jul","Aug", "Sep", "Oct", "Nov","Dec"];
 
     const date = props.dateofissued.getDate();
-    const month = months[props.dateofissued.getMonth() + 1];
+    const month = months[props.dateofissued.getMonth()];
     const year = props.dateofissued.getFullYear();
         
     return (
