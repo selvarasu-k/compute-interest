@@ -1,19 +1,19 @@
-tbody, tr {
+.table-body-list > tr {
     cursor: pointer;
     border-bottom: 1px solid #dfdddd;
 }
-tbody:first-child {
+.table-body-list > td:first-child {
     background-color: #f9f9f9;
 }
-tbody:last-child {
+.table-body-list > td:last-child {
     border-bottom: none;
 }
-tr, td {
+.table-body-list > tr > td {
     font-size: 14px;
     text-align: left;
     padding: 14px 0px 16px 21px;
 }
-td:nth-child(2) {
+.table-body-list > tr > td:nth-child(2) {
     font-weight: bold;
     color: #ff5e65;
 }

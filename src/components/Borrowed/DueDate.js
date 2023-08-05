@@ -11,9 +11,9 @@ const DueDate = (props) => {
     const year = props.duedate.getFullYear();
         
     return (
-        <td>
-            {date} {month} {year} 
-        </td>
+                <>
+                    {date} {month} {year}
+                </> 
     )}
 
 export default DueDate;

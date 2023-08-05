@@ -1,0 +1,6 @@
+.chart-list > tr > td {
+    padding-left: 30px;
+}
+.chart-list > tr > td > div {
+    display: flex;
+}

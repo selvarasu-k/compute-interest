@@ -11,9 +11,9 @@ const DateofIssued = (props) => {
     const year = props.dateofissued.getFullYear();
         
     return (
-        <td>
-            {date} {month} {year} 
-        </td>
+                <>
+                    {date} {month} {year}
+                </>
     )}
 
 export default DateofIssued;

@@ -1,0 +1,14 @@
+.chart-list > tr > td {
+    padding-left: 30px !important;
+    padding: 13px 0px;
+}
+
+.chart-list > tr > td > div {
+    display: flex;
+}
+.color-circle {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    border-radius: 100%;
+}

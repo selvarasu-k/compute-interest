@@ -7,7 +7,7 @@
 .compute-borrow {
     margin-bottom: 16px;
 }
-h3 {
+.compute-borrow > h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;

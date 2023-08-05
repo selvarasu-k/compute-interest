@@ -1,14 +1,14 @@
 import React from "react";
 import BorrowedListItem from "./BorrowedListItem";
-import './BorrowedList.css';
+import BorrowedListStyle from './BorrowedList.module.css';
 
 const BorrowedList = (props) => {
     return (
-        <div className="table-parent-div">
-            <div className="table-heading">
+        <div className={BorrowedListStyle["table-parent-div"]}>
+            <div className={BorrowedListStyle["table-heading"]}>
                 <p>Borrowed Information</p>
             </div>
-            <div className="table-data">
+            <div className={BorrowedListStyle["table-data"]}>
                 <table>
                     <thead>
                         <tr>

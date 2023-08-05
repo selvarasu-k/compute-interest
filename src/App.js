@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Borrowed from './components/Borrowed/Borrowed';
 import ComputeBorrowed from './components/ComputeBorrowed/ComputeBorrowed';
+import BorrowChart from './components/BorrowChart/BorrowChart';
 import './App.css';
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
 
   return (
     <div className="app">
-      <div className='app-body'>
-        <div className='app-main'>
-          <div className='app-components'>
-            <ComputeBorrowed passBorrowData={data} />
-            <Borrowed getBorrowData={calculateBorrowData} />
+      <div className="app-body">
+        <div className="app-main">
+          <div className="app-components">
+            <BorrowChart passBorrowChartData={data}/>
+            <ComputeBorrowed passBorrowData={data}/>
+            <Borrowed getBorrowData={calculateBorrowData}/>
           </div>
         </div>
       </div>

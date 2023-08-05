@@ -1,9 +1,0 @@
-td {
-    font-size: 14px;
-    text-align: left;
-    padding: 14px 0px 16px 21px;
-}
-td:nth-child(2) {
-    font-weight: bold;
-    color: #ff5e65;
-}

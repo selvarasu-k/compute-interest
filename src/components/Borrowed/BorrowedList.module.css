@@ -15,7 +15,7 @@
     color: #545454;
     padding: 13px 0px 13px 21px;
 }
-table {
+.table-data > table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -23,27 +23,11 @@ table {
 thead {
     background-color: #f9f9f9;
 }
-tr{
-    cursor: pointer;
-    border-bottom: 1px solid #dfdddd;
-}
-tbody:first-child {
-    background-color: #f9f9f9;
-}
-tbody:last-child {
+thead tr {
     border-bottom: none;
 }
-tr, th {
+tr > th {
     font-size: 13px;
     text-align: left;
     padding: 13px 21px;
-}
-tr, td {
-    font-size: 14px;
-    text-align: left;
-    padding: 14px 0px 16px 21px;
-}
-td:nth-child(2) {
-    font-weight: bold;
-    color: #ff5e65;
 }

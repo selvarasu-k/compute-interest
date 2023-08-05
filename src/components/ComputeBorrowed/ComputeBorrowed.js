@@ -43,10 +43,10 @@ const ComputeBorrowed = (props) => {
                     </Card>
                     <Card>
                         <h3 className="card-value" style={{color: computeBorrow[1].cardcolor}}>
-                            <CalculateTotalInterest 
+                            <CalculateTotalInterest
                                     getInterest={calcInterest}
                                     cardvalue={props.passBorrowData}
-                                />
+                            />
                         </h3>
                         <span className="card-text">{computeBorrow[1].cardtext}</span>
                     </Card>

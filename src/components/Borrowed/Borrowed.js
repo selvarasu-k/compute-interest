@@ -10,7 +10,7 @@ const myBorrowList = [
         interest: 2,
         dateofissued: new Date('06-01-2023'),
         description: 'Tamil Date Vaikaasi 18',
-        duedate: new Date('06-01-2024')
+        duedate: new Date('06-01-2024'),
     },
     {
         key: 'a2',
@@ -64,7 +64,7 @@ const Borrowed = ({getBorrowData}) => {
     getBorrowData(myBorrowList);
 
     return (
-        <div>
+        <div className="list-borrow-data">
             <BorrowedList passBorrowData = {myBorrowList} />
         </div>
     ) 

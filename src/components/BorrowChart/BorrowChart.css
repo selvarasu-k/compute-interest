@@ -1,0 +1,23 @@
+.borrow-chart {
+    background: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    border-color: #e0e0e0;
+    overflow: hidden;
+}
+.borrow-chart {
+    margin-bottom: 16px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.container {
+    padding: 30px 16px;
+}
+.chart-names {
+    font-size: 16px;
+}
