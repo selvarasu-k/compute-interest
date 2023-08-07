@@ -1,0 +1,25 @@
+.interest-chart-block {
+    margin-bottom: 16px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.interest-chart {
+    width: 50%;
+    text-align: center;
+}
+.interest-chart {
+    background: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    border-color: #e0e0e0;
+    overflow: hidden;
+}
+.interest-chart:first-child {
+    margin-right: 16px;
+}
+.chart-names {
+    font-size: 16px;
+}

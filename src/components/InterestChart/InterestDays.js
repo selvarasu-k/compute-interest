@@ -1,28 +1,14 @@
 import React from "react";
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import BorrowChartList from "./BorrowChartList";
-import './BorrowChart.css';
 
-const BorrowChart = (props) => {
+const InterestDays = (props) => {
 
-    const showData = props.passBorrowChartData.map(list => {
-        return ({
-          name: `<div style="font-size: 16px;font-weight: normal">${list.creditor}</div>`,
-          y: list.amount
-        })
-      })
+    const showAmountValues = props.passInterestChartData.map(value => {
+        return `<div><div>₹ </div>${value.amount.toLocaleString('en-IN')}</div>` ;
+    })
 
-      const chartColors = [
-        "#61EFCD",
-        "#CDDE1F",
-        "#FEC200",
-        "#CA765A",
-        "#2485FA",
-        "#F57D7D"
-      ];
-     
-     Highcharts.setOptions({    
+    Highcharts.setOptions({    
         lang: {                
             decimalPoint: '.', 
             thousandsSep: ','  
@@ -31,33 +17,44 @@ const BorrowChart = (props) => {
 
     const options = {
         chart: {
-          type: 'pie',
-          width: 650
+          type: 'line',
+          width: 630
         },        
-        colors: chartColors,
+        colors: props.passchartColors,
         credits: {
           text: '',
           href: '#'
         },
         tooltip: { 
-          enabled: false
+          enabled: true
         },
         title: {
-          text: 'Borrow Chart',
+          text: 'Interest To Date - Days',
           align: 'left',
           margin: 40
         },
-        subtitle: {
-          text: 'Yearly interest - Percentage',
-          align: 'left'
+        xAxis: {
+            categories: showAmountValues,
+            crosshair: true,
+            title: {
+                text: 'Principle',
+                align: 'middle',
+                margin: 20
+            }
         },
+        yAxis: [{
+            title: {
+                text: 'Days',
+                margin: 15
+            }
+        }],
          plotOptions: {
-          pie: {
+          line: {
             allowPointSelect: false,
             cursor: 'pointer',
             dataLabels: {
               enabled: true,
-              format: '{point.name}'
+              format: '{point.y} days'
             },
             showInLegend: false
           },
@@ -78,34 +75,26 @@ const BorrowChart = (props) => {
         },
         series: [
             {
-                name: 'Borrow Amount',
+                name: 'Days',
                 colorByPoint: true,
                 innerSize: '50%',
-                data: showData
+                data: props.passInterestDays
             }
         ]
     }
 
     return (
-        <div className="borrow-chart">
+        <div className="interest-amount">
             <div className="container">
-                <div className="pie-chart">
+                <div className="column-chart">
                     <HighchartsReact
                         highcharts={Highcharts}
                         options={options}
                     />
-                </div>
-                <div className="pie-chart-borrow-data">
-                    <div className="borrow-data-list">
-                        <BorrowChartList 
-                              passChartList={props.passBorrowChartData}
-                              passChartColors={chartColors}
-                        />
-                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default BorrowChart;
+export default InterestDays;
