@@ -7,6 +7,32 @@
   background-color: #eaf4fb;
   min-height: 100vh;
 }
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 .app-components {
-  padding: 50px 50px 50px 50px;
+  margin-left: 210px;
+}
+.app-components {
+  width: 85%;
+}
+.app-components {
+  padding: 50px 20px 16px 20px;
+}
+.side-bar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  z-index: 100001;
+  overflow-y: auto;
+  margin-left: 16px;
+}
+.side-bar {
+  background: #fff;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.16);
+  color: #fff;
 }

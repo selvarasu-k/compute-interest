@@ -1,0 +1,103 @@
+.logo {
+    width: 100%;
+    padding: 10px 0px;
+    background: #f7f7f7;
+  }
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-info {
+    position: relative;
+    height: 200px;
+    margin-top: 35px;
+  }
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .profile-name {
+    color: black;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin-top: 12px;
+  }
+  .balance-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .balance-container {
+    text-align: center;
+    background: #f9f9f9;
+    margin: 0 26px;
+    margin-top: 12px;
+    height: 34px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+  .balance-align {
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    color: #474747;
+  }
+  .balance-align {
+    margin-right: 8px;
+  }
+  .balance-number {
+    color: #474747;
+  }
+  .tab-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tab-list {
+    position: relative;
+    height: 250px;
+  }
+div.tab-list::after, div.profile-info::after {
+    content: '';
+    background-image: linear-gradient(-90deg, #FFFFFF 3%, #B8CBCC 51%, #FFFFFF 95%);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.list-item {
+    padding: 10px 0px;
+    color: #474747;
+    cursor: pointer;
+}
+.list-item > p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #545454;
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    height: 32px;
+    line-height: 32px;
+}
+.active {
+  width: 100%;
+  text-align: center;
+}
+.active > p {    
+    margin: 0px 20px;
+    background: linear-gradient(-180deg, #6890FB 0%, #497DF2 100%);
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.78px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+}

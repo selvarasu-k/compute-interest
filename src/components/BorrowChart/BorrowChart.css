@@ -12,12 +12,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
 }
 .container {
-    padding: 20px 16px;
+    padding: 20px 10px;
 }
 .chart-names {
     font-size: 16px;
+}
+.pie-chart-borrow-data {
+    margin-left: 30px;
 }

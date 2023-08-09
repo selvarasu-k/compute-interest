@@ -18,7 +18,7 @@ const InterestDays = (props) => {
     const options = {
         chart: {
           type: 'line',
-          width: 630
+          width: 560
         },        
         colors: props.passchartColors,
         credits: {

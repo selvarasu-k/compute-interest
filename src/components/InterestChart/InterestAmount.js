@@ -18,7 +18,7 @@ const InterestAmount = (props) => {
     const options = {
         chart: {
           type: 'column',
-          width: 630
+          width: 560
         },        
         colors: props.passchartColors,
         credits: {
