@@ -6,13 +6,15 @@ import './BorrowChart.css';
 
 const BorrowChart = (props) => {
 
-    const showData = props.passBorrowChartData.map(list => {
+    const recentChartList = props.passBorrowChartData.slice(0,6);
+
+    const showData = recentChartList.map(list => {
         return ({
           name: `<div style="font-size: 16px;font-weight: normal">${list.creditor}</div>`,
-          y: list.amount
+          y: parseFloat(list.amount)
         })
       })
-
+      
       const chartColors = [
         "#61EFCD",
         "#CDDE1F",
@@ -98,7 +100,7 @@ const BorrowChart = (props) => {
                 <div className="pie-chart-borrow-data">
                     <div className="borrow-data-list">
                         <BorrowChartList 
-                              passChartList={props.passBorrowChartData}
+                              passChartList={recentChartList}
                               passChartColors={chartColors}
                         />
                     </div>

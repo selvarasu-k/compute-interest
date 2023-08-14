@@ -5,7 +5,7 @@ import HighchartsReact from 'highcharts-react-official';
 const InterestDays = (props) => {
 
     const showAmountValues = props.passInterestChartData.map(value => {
-        return `<div><div>₹ </div>${value.amount.toLocaleString('en-IN')}</div>` ;
+        return `<div><div>₹ </div>${new Intl.NumberFormat("en-IN").format(value.amount)}</div>`;
     })
 
     Highcharts.setOptions({    

@@ -17,6 +17,7 @@ const BorrowChartList = (props) => {
                     />
                 )
             })}
+            
         </table>
     )
 }

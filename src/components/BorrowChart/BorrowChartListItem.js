@@ -4,6 +4,8 @@ import BorrowChartListItemStyle from './BorrowChartListItem.module.css';
 
 const BorrowChartListItem = (props) => {
 
+    const amountFormatted = new Intl.NumberFormat("en-IN").format(props.amount);
+
     return (
         <tbody className={BorrowChartListItemStyle["chart-list"]}>
             <tr>
@@ -17,7 +19,7 @@ const BorrowChartListItem = (props) => {
                         </div>
                     </div>
                 </td>
-                <td>₹ {props.amount.toLocaleString('en-IN')}</td>
+                <td>₹ {amountFormatted.toLocaleString('en-IN')}</td>
                 <td><InterestPercentage dateofissued={props.dateofissued}
                                         amount={props.amount}
                                         interest={props.interest}

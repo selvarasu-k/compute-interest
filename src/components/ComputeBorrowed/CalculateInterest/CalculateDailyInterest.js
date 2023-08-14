@@ -6,8 +6,10 @@ const CalculateDailyInterest = (props) => {
 
     const dailyInterst = Math.floor(day.toLocaleString('en-IN'));
 
+    const amountFormatted = new Intl.NumberFormat("en-IN").format(dailyInterst);
+
     return (
-        <div>₹ {dailyInterst}</div>
+        <div>₹ {amountFormatted}</div>
     )
 
 }

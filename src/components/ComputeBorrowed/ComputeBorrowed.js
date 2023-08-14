@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import CalculateAmount from "./CalculateAmount";
 import CalculateTotalInterest from "./CalculateInterest/CalculateTotalInterest";
@@ -27,25 +27,46 @@ import './ComputeBorrowed.css';
 
 const ComputeBorrowed = (props) => {
 
-    const [interest, setInterest] = useState(0);
+    let sumofinterestToDate = 0;
 
-    const calcInterest = (int) => {
-            setInterest(int);
-    }
+        props.passComputeBorrowData.map(data => {
+
+            const dateOfIssued = data.dateofissued;
+            const todayDate = new Date();
+
+            const dateOfIssuedInMs = dateOfIssued.getTime();
+            const todayDateInMs = todayDate.getTime();
+
+            const msDiff = Math.abs(dateOfIssuedInMs - todayDateInMs);
+            const DayInMs = 24 * 60 * 60 * 1000;
+            const calcDays = msDiff / DayInMs;
+            const countDays = Math.floor(calcDays);
+            
+            const CalcMonthlyInterest = data.amount * data.interest / 100;
+            const interestToDate = Math.floor((CalcMonthlyInterest / 30) * countDays);
+
+            sumofinterestToDate += interestToDate;
+
+            return (
+                <>
+                {interestToDate}
+                </>
+            )
+        }
+    )
 
     return (
         <div className="compute-borrow">
                     <Card>
                         <h3 className="card-value" style={{color: computeBorrow[0].cardcolor}}>
-                            <CalculateAmount cardvalue={props.passBorrowData} />
+                            <CalculateAmount cardvalue={props.passComputeBorrowData} />
                         </h3>
                         <span className="card-text">{computeBorrow[0].cardtext}</span>
                     </Card>
                     <Card>
                         <h3 className="card-value" style={{color: computeBorrow[1].cardcolor}}>
                             <CalculateTotalInterest
-                                    getInterest={calcInterest}
-                                    cardvalue={props.passBorrowData}
+                                    passInterest={sumofinterestToDate}
                             />
                         </h3>
                         <span className="card-text">{computeBorrow[1].cardtext}</span>
@@ -53,7 +74,7 @@ const ComputeBorrowed = (props) => {
                     <Card>
                         <h3 className="card-value" style={{color: computeBorrow[2].cardcolor}}>
                             <CalcMonthlyInterest 
-                                    passInterest={interest} 
+                                    passInterest={sumofinterestToDate} 
                             />
                         </h3>
                         <span className="card-text">{computeBorrow[2].cardtext}</span>
@@ -61,7 +82,7 @@ const ComputeBorrowed = (props) => {
                     <Card>
                         <h3 className="card-value" style={{color: computeBorrow[3].cardcolor}}>
                             <CalculateDailyInterest 
-                                    passInterest={interest}
+                                    passInterest={sumofinterestToDate}
                             />
                         </h3>
                         <span className="card-text">{computeBorrow[3].cardtext}</span>

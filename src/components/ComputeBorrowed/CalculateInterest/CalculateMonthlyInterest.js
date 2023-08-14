@@ -4,10 +4,12 @@ const CalcMonthlyInterest = (props) => {
 
     const month = props.passInterest / 30;
 
-    const monthlyInterst = Math.floor(month.toLocaleString('en-IN'));
+    const monthlyInterst = Math.floor(month);
+
+    const amountFormatted = new Intl.NumberFormat("en-IN").format(monthlyInterst);
 
     return (
-        <div>₹ {monthlyInterst}</div>
+        <div>₹ {amountFormatted}</div>
     )
 }
 

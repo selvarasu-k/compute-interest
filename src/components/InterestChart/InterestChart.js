@@ -5,7 +5,9 @@ import InterestChartStyling from './InterestChart.module.css';
 
 const InterestChart = (props) => {
 
-    const showInterest = props.passInterestChartData.map((intamount) => {
+    const recentChartInterest = props.passInterestChartData.slice(0,6);
+
+    const showInterest = recentChartInterest.map((intamount) => {
 
         const dateOfIssued = intamount.dateofissued;
         const todayDate = new Date();
@@ -27,7 +29,7 @@ const InterestChart = (props) => {
             })
     })
 
-    const showDays = props.passInterestChartData.map((intamount) => {
+    const showDays = recentChartInterest.map((intamount) => {
 
         const dateOfIssued = intamount.dateofissued;
         const todayDate = new Date();
