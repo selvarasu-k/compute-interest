@@ -1,17 +1,19 @@
-.dashboard-block {
+.all-credit-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
-.dashboard-block {
+.all-credit-block {
     margin-bottom: 15px;
     padding: 0px 2px;
 }
-.dashboard-name {
+.credit-name {
     color: #688496;
     font-size: 15px;
     font-weight: 500;
+    padding: 0px 5px;
 }
 .credit-button {
     width: 150px;

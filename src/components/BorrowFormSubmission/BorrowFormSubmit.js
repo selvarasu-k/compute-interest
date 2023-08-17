@@ -24,9 +24,9 @@ const BorrowFormSubmission = (props) => {
     }
 
     return (
-        <div className="dashboard-block">
-            <div className="dashboard-name">
-                Dashboard
+        <div className="all-credit-block">
+            <div className="credit-name">
+                All Credits
             </div>
             <div className="add-button">
                 <button className="credit-button" onClick={showFormHandler}>ADD CREDIT</button>

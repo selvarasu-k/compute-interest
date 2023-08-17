@@ -5,6 +5,7 @@ import BorrowChart from './components/BorrowChart/BorrowChart';
 import InterestChart from './components/InterestChart/InterestChart';
 import Profile from './components/Profile/Profile';
 import BorrowFormSubmission from './components/BorrowFormSubmission/BorrowFormSubmit';
+import About from './components/Profile/About';
 import './App.css';
 
 const myBorrowList = [
@@ -74,24 +75,63 @@ function App() {
       })
     }
 
+    const recentBorrowData = borrowdata.slice(0,6);
+
+    const [switchingTab, setSwitchingTab] = useState(0);
+
+    const activeTabIndex = (id) => {
+      setSwitchingTab(id);
+    }
+
     return (
       <div className="app">
         <div className="app-body">
           <div className="app-container">
             <div className='side-bar'>
               <Profile/>
+              <div className="tab-list">
+                <div onClick={() => activeTabIndex(0)} 
+                     className={switchingTab === 0 ? "active" : "list-item"}>
+                  Dashboard
+                </div>
+                <div onClick={() => activeTabIndex(1)} 
+                     className={switchingTab === 1 ? "active" : "list-item"}>
+                  Credits
+                </div>
+                <div onClick={() => activeTabIndex(2)} 
+                     className={switchingTab === 2 ? "active" : "list-item"}>
+                  About
+                </div>
+              </div>
             </div>
-            <div className="app-components">
-              <BorrowFormSubmission getBorrowData={addBorrowData}/>
-              <ComputeBorrowed passComputeBorrowData={borrowdata}/>
-              <BorrowChart passBorrowChartData={borrowdata}/>
-              <InterestChart passInterestChartData={borrowdata}/>
-              <Borrowed passBorrowData={borrowdata}/>
+            <div className='tab-content-block'>
+              <div className={switchingTab === 0 ? "active-tab-content" : "tab-content"}>
+                <div className="app-components">
+                  <div className="all-credits">Dashboard</div>
+                  <ComputeBorrowed passComputeBorrowData={borrowdata}/>
+                  <BorrowChart passBorrowChartData={borrowdata}/>
+                  <InterestChart passInterestChartData={borrowdata}/>
+                  <Borrowed passBorrowData={recentBorrowData}/>
+                </div>
+              </div>
+              <div className={switchingTab === 1 ? "active-tab-content" : "tab-content"}>
+                <div className='app-components'>
+                  <div className='all-credits-block'>
+                    <BorrowFormSubmission getBorrowData={addBorrowData}/>
+                    <Borrowed passBorrowData={borrowdata}/>
+                  </div>
+                </div>
+              </div>
+              <div className={switchingTab === 2 ? "active-tab-content" : "tab-content"}>
+                <div className='app-components'>
+                  <About/>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    );
+    )
 }
 
 export default App;

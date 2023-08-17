@@ -20,17 +20,6 @@ const Profile = () => {
                     <span className="balance-number">₹ 5,00,000</span>
                 </div>
             </div>
-            <div className="tab-list">
-                <div className="list-item active">
-                    <p>Dashboard</p>
-                </div>
-                <div className="list-item">
-                    <p>Credits</p>
-                </div>
-                <div className="list-item">
-                    <p>About</p>
-                </div>
-            </div>
         </div>
     )
 }
