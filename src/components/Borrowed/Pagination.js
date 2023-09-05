@@ -35,33 +35,33 @@ const Pagination = (props) => {
         <nav>
             <ul className='pagination'>
                 <li className="page-item">
-                    <a href="/#" className='page-link' onClick={firstPage} 
-                    style={{opacity: props.currentPage !== 1 ? "1" : "0.5"}}>FIRST
-                    </a>
+                    <button className='page-link' onClick={firstPage} 
+                            style={{opacity: props.currentPage !== 1 ? "1" : "0.5"}}>FIRST
+                    </button>
                 </li>
                 <li className='page-item'>
-                    <a href="/#" className='page-link' 
-                    onClick={previousPage} style={{opacity: props.currentPage !== 1 ? "1" : "0.5"}}>PREV
-                    </a>
+                    <button className='page-link' onClick={previousPage} 
+                            style={{opacity: props.currentPage !== 1 ? "1" : "0.5"}}>PREV
+                    </button>
                 </li>
                 {
                     numbers.map((num, index) => (
                         <li className={`page-item ${props.currentPage === num ? 'paginate-active' : ''}`} key={index}>
-                            <a href="/#" className='page-links' 
-                            onClick={() => changeCurrentPage(num)}>{num}
-                            </a>
+                            <button className='page-links' 
+                                    onClick={() => changeCurrentPage(num)}>{num}
+                            </button>
                         </li>
                     ))
                 }
                 <li className='page-item'>
-                    <a href="/#" className='page-link' 
-                                onClick={nextPage} style={{opacity: props.currentPage !== npage ? "1" : "0.5"}}>NEXT
-                    </a>
+                    <button className='page-link' 
+                            onClick={nextPage} style={{opacity: props.currentPage !== npage ? "1" : "0.5"}}>NEXT
+                    </button>
                 </li>
                 <li className="page-item">
-                    <a href="/#" className='page-link' 
-                    onClick={lastPage} style={{opacity: props.currentPage !== npage ? "1" : "0.5"}}>LAST
-                    </a>
+                    <button className='page-link' 
+                            onClick={lastPage} style={{opacity: props.currentPage !== npage ? "1" : "0.5"}}>LAST
+                    </button>
                 </li>
             </ul>
         </nav>
