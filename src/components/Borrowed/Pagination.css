@@ -1,10 +1,10 @@
 .pagination-block {
-        width: auto;
-        background: #ffffff;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-        border-color: #e0e0e0;
-        overflow: hidden;
+    width: auto;
+    background: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    border-color: #e0e0e0;
+    overflow: hidden;
 }
 .pagination-block {
     padding: 20px 30px;
@@ -41,14 +41,14 @@
 }
 .page-links {
     border: 1px solid #ccc;
-    padding: 10px 15px;
+    padding: 8px 13px;
     border-radius: 50%;
     font-size: 16px;
     background: #ffffff;
     color: #545454;
 }
 .page-links:hover {
-    padding: 10px 15px;
+    padding: 8px 13px;
     border-radius: 50%;
     font-size: 16px;
     border-radius: 50%;
