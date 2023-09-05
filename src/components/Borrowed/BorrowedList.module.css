@@ -7,13 +7,42 @@
     overflow: hidden;
 }
 .table-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+}
+.table-heading {
+    padding: 13px 21px;
     border-bottom: 1px solid #dfdddd;
 }
 .table-heading p {
     font-size: 16px;
     color: #545454;
-    padding: 13px 0px 13px 21px;
+}
+.delete-button {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.edit-button {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    cursor: pointer;
 }
 .table-data > table {
     width: 100%;
@@ -30,4 +59,28 @@ tr > th {
     font-size: 13px;
     text-align: left;
     padding: 13px 21px;
+}
+.table-body-list > tr {
+    cursor: pointer;
+    border-bottom: 1px solid #dfdddd;
+}
+.table-body-list > td:first-child {
+    background-color: #f9f9f9;
+}
+.table-body-list > td:last-child {
+    border-bottom: none;
+}
+.table-body-list > tr > td {
+    font-size: 14px;
+    text-align: left;
+    padding: 14px 0px 14px 21px;
+}
+.table-body-list > tr > td:nth-child(3) {
+    font-weight: bold;
+    color: #ff5e65;
+}
+.checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
 }

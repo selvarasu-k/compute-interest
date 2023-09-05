@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Getting Started with Compute Interest App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Compute Interest App](https://selvarasu-k.github.io/compute-interest/).
 
-## Available Scripts
+## Way of project structure
 
-In the project directory, you can run:
+In the project, you can:
 
-### `npm start`
+### `calculate interest`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Calculated the amount, interest, and interest days from the date of issue.
+Using via Different types of charts are used to explain the tasks...!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+It's easy to understand and simply developing project structure.\
+and easy way to deploy local to remote repo.
 
-### `npm test`
+### `project test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Every component spritted depending on the design concepts like charts, tables, and profiles.
+Every project category task we did deploy. Created different branches from the local branch to the remote branch.
 
-### `npm run build`
+### `project run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We got more errors in the project tasks. and fixed the errors stage by stage, then learned more about the bugs from how to fix the bugs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `About this compute interest`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This Compute Interest tracker application showcases using several Essential Highchairs like Pie charts, Column charts, and Line charts together in a real-world application scenario. You can further explore the source code of this application and use it as a reference to add Highcharts Essentials components to our applications.
 
 ### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Several categories of code are split: 
 
-### Analyzing the Bundle Size
+    In DashBoard:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Compute Borrowed,
+    Borrowed Pie Chart with Interest %,
+    Interest To Date: Bar Chart, Line Chart,
+    Borrowed List Table Data
 
-### Making a Progressive Web App
+    In the above dashboard sections contents are submitted show recent 6 data's.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Learn More
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ In the Credits Tabs,
+
+    We did more CRUD operations are done successfully.
+
+    Added table data with check boxes and these checkboxes we select single, particular, selectall actions to be performed.
+
+    And select one checkbox, In the edit button, if edit the particular row in update the data from the table data operations.
+
+    Also we can delete single row data, particular, multiple rows from the delete button.
+
+    Then further we did add pagination, sprit the table data row records. It's up to you line 10 records per page on the pagination.
+
+    Using the next and previous button, first and last button, number of pages spritted depends on the records will get the numbers auto generated via the records.
+
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project tasks is easy to deploy via git.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We did more about local to remote git repo on the project structure concepts. It's simply run without error free, development build to production.

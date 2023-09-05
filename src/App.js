@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Borrowed from './components/Borrowed/Borrowed';
 import ComputeBorrowed from './components/ComputeBorrowed/ComputeBorrowed';
 import BorrowChart from './components/BorrowChart/BorrowChart';
 import InterestChart from './components/InterestChart/InterestChart';
+import BorrowedTable from './components/BorrowedTable/BorrowedTable';
 import Profile from './components/Profile/Profile';
-import BorrowFormSubmission from './components/BorrowFormSubmission/BorrowFormSubmit';
 import About from './components/Profile/About';
+import Borrowed from './components/Borrowed/Borrowed';
 import './App.css';
 
 const myBorrowList = [
@@ -59,9 +59,9 @@ const myBorrowList = [
       creditor: 'Periamma',
       amount: 10000,
       interest: 2,
-      dateofissued: new Date('10-31-2022'),
+      dateofissued: new Date('10-30-2022'),
       description: 'Tamil date aippasi 14',
-      duedate: new Date('10-31-2023')
+      duedate: new Date('10-30-2023')
   }
 ];
 
@@ -69,13 +69,11 @@ function App() {
 
     const [borrowdata, setBorrowData] = useState(myBorrowList);
 
-    const addBorrowData = (borrow) => {
+    const addData = (data) => {
       setBorrowData((prevBorrow) => {
-        return [borrow, ...prevBorrow];
-      })
+        return [data, ...prevBorrow];
+      })   
     }
-
-    const recentBorrowData = borrowdata.slice(0,6);
 
     const [switchingTab, setSwitchingTab] = useState(0);
 
@@ -111,14 +109,17 @@ function App() {
                   <ComputeBorrowed passComputeBorrowData={borrowdata}/>
                   <BorrowChart passBorrowChartData={borrowdata}/>
                   <InterestChart passInterestChartData={borrowdata}/>
-                  <Borrowed passBorrowData={recentBorrowData}/>
+                  <BorrowedTable passBorrowTableData={borrowdata}/>
                 </div>
               </div>
               <div className={switchingTab === 1 ? "active-tab-content" : "tab-content"}>
                 <div className='app-components'>
                   <div className='all-credits-block'>
-                    <BorrowFormSubmission getBorrowData={addBorrowData}/>
-                    <Borrowed passBorrowData={borrowdata}/>
+                    <Borrowed passBorrowData={myBorrowList}
+                              Data={addData}
+                              borrowdata={borrowdata}
+                              setBorrowData={setBorrowData}
+                    />
                   </div>
                 </div>
               </div>

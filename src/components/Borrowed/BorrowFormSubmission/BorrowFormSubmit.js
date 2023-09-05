@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import closebtn from "../../Images/close.png";
+import closebtn from "../../../Images/close.png";
 import FormElements from "./FormElements";
 import './BorrowFormSubmit.css';
 
@@ -20,10 +20,12 @@ const BorrowFormSubmission = (props) => {
             ...enteredBorrow,
             key: Math.random().toString(),
         };
-        props.getBorrowData(borrowData);
+        
+        props.getBorrowData(borrowData); 
     }
 
     return (
+
         <div className="all-credit-block">
             <div className="credit-name">
                 All Credits
@@ -41,11 +43,13 @@ const BorrowFormSubmission = (props) => {
                             <span className="closebtn" onClick={hideFormHandler}><img src={closebtn} alt="closebutton"/></span>
                         </div>
                         <FormElements passCloseHandler={hideFormHandler}
-                                      getFormBorrowData={saveFormBorrowData}/>
+                                      getFormBorrowData={saveFormBorrowData}
+                        />
                     </div>
                 </div>
             </div> : ""}
         </div>
+
     )
 }
 

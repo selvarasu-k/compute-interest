@@ -1,14 +1,14 @@
 import React from "react";
 import DateofIssued from "./DateofIssued";
 import DueDate from "./DueDate";
-import BorrowedListItemStyle from './BorrowedListItem.module.css';
+import BorrowedTableListItemStyle from './BorrowedTableListItem.module.css';
 
-const BorrowedListItem = (props) => {
+const BorrowedTableListItem = (props) => {
 
         const amountFormatted = new Intl.NumberFormat("en-IN").format(props.amount);
 
         return (
-            <tbody className={BorrowedListItemStyle["table-body-list"]}>
+            <tbody className={BorrowedTableListItemStyle["table-body-list"]}>
                 <tr>
                     <td>{props.creditor}</td>
                     <td>₹ {amountFormatted}</td>
@@ -20,4 +20,4 @@ const BorrowedListItem = (props) => {
             </tbody>
         )}
 
-export default BorrowedListItem;
+export default BorrowedTableListItem;

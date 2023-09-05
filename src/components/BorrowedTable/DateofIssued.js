@@ -1,0 +1,18 @@
+import React from "react";
+
+const DateofIssued = (props) => {
+
+    const months = ["Jan", "Feb", "Mar", "Apr", "May","Jun", 
+    "Jul","Aug", "Sep", "Oct", "Nov","Dec"];
+
+    const date = props.dateofissued.getDate();
+    const month = months[props.dateofissued.getMonth()];
+    const year = props.dateofissued.getFullYear();
+        
+    return (
+                <>
+                    {date} {month} {year}
+                </>
+    )}
+
+export default DateofIssued;
