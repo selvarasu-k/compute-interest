@@ -1,0 +1,65 @@
+.input-row {
+    display: flex;
+    flex-direction: row;
+}
+.input-row > div:first-child {
+    margin-right: 20px;
+}
+.input-row {
+    margin-top: 30px;
+}
+/* .input-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.input-element {
+    margin-top: 30px;
+} */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+.buttons {
+    margin-top: 30px;
+}
+.submit-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-image: linear-gradient(-180deg, #6890FB 0%, #4273F9 100%);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 5px 10px;
+    box-shadow: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.submit-button {
+    margin-right: 10px;
+}
+.submit-button:hover {
+    background-image: linear-gradient(-180deg, #2256e1 0%, #073ccb 100%);
+}
+.cancel-button {
+    background: #fff;
+    border: 1px solid #4273f9;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    color: #4273f9;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.cancel-button:hover {
+    background-image: linear-gradient(-180deg, #6890FB 0%, #4273F9 100%);
+    color: #FFFFFF;
+}
+.describe {
+    margin-top: 60px;
+}

@@ -1,0 +1,58 @@
+{
+  "borrowed": [
+    {
+      "creditor": "Karthick",
+      "amount": "50000",
+      "interest": "1.5",
+      "dateofissued": "2024-01-02",
+      "duedate": "2025-01-02",
+      "description": "You got the amount 50k",
+      "id": 1
+    },
+    {
+      "creditor": "Vijay",
+      "amount": "100000",
+      "interest": "1.5",
+      "dateofissued": "2024-02-05",
+      "duedate": "2025-02-05",
+      "description": "You got the amount 100k",
+      "id": 2
+    },
+    {
+      "creditor": "Sekar",
+      "amount": "20000",
+      "interest": "2",
+      "dateofissued": "2024-01-07",
+      "duedate": "2025-01-07",
+      "description": "You got the amount 20k",
+      "id": 3
+    },
+    {
+      "creditor": "Ranjith",
+      "amount": "10000",
+      "interest": "2",
+      "dateofissued": "2024-03-12",
+      "duedate": "2025-03-12",
+      "description": "You got the amount 10k",
+      "id": 4
+    },
+    {
+      "creditor": "Raja",
+      "amount": "30000",
+      "interest": "2",
+      "dateofissued": "2024-02-07",
+      "duedate": "2025-02-07",
+      "description": "You got the amount 30k",
+      "id": 5
+    },
+    {
+      "creditor": "Siva",
+      "amount": "10000",
+      "interest": "2",
+      "dateofissued": "2024-03-03",
+      "duedate": "2025-03-03",
+      "description": "You got the amount 10k",
+      "id": 6
+    }
+  ]
+}
