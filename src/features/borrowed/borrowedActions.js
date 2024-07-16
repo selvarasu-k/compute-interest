@@ -5,7 +5,7 @@ import {
   updateBorrowData,
 } from "./borrowedSlice";
 
-const API_URL = "https://json-server-deployment-uepg.onrender.com/borrowed";
+const API_URL = "http://localhost:5000/borrowed";
 
 export const addBorrow = (borrowData) => async (dispatch) => {
   try {

@@ -1,15 +1,6 @@
 {
   "borrowed": [
     {
-      "creditor": "Karthick",
-      "amount": "50000",
-      "interest": "1.5",
-      "dateofissued": "2024-01-02",
-      "duedate": "2025-01-02",
-      "description": "You got the amount 50k",
-      "id": 1
-    },
-    {
       "creditor": "Vijay",
       "amount": "100000",
       "interest": "1.5",
@@ -53,6 +44,15 @@
       "duedate": "2025-03-03",
       "description": "You got the amount 10k",
       "id": 6
+    },
+    {
+      "creditor": "Karthick",
+      "amount": "50000",
+      "interest": "1.5",
+      "dateofissued": "2024-01-02",
+      "duedate": "2025-01-02",
+      "description": "You got the amount 50k",
+      "id": 7
     }
   ]
 }
